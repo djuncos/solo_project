@@ -1,40 +1,26 @@
+destinations.show
+
+
 <h2><%= @destination.address %></h2>
 
-<h2><%= @coordinates %></h2>
+<h2><%= @dest_coordinates %></h2>
 
 
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
+    <script>
+   	
+    var dest_lat = <%= @dest_coordinates[0] %>
+    var dest_long = <%= @dest_coordinates[1] %>
+
+	var user_lat = <%= @user_coordinates[0] %>
+    var user_long = <%= @user_coordinates[1] %>
 
 
+    </script>
 
 
+<div id="map"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
 
 
 <%= link_to "reset destination", destination_path(@destination), method: :delete %>

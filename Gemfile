@@ -6,8 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-
-gem 'gmaps4rails', '~> 2.1.2'
+gem 'jasmine', '~> 2.5.2'
 
 gem 'geocoder', '~> 1.4.3'
 

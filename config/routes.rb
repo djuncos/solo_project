@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
 
   resources :destinations
+  resources :spaces
 
 
 end
