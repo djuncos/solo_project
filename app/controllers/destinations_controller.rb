@@ -7,10 +7,13 @@ class DestinationsController < ApplicationController
 		end
 
 
-		 def show
-		    @user = current_user
-    		@destination = (Destination.where(:user_id => @user.id)).first
-		 end
+		def show
+		    # @user = current_user
+		    @destination = Destination.find(params[:id])
+    		# @destination = (Destination.where(:user_id => @user.id)).first
+    		@location = Geocoder.search(@destination.address)
+    		@coordinates = [@location[0].latitude,@location[0].longitude]
+		end
 	
 
 		def create

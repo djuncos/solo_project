@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+
+gem 'gmaps4rails', '~> 2.1.2'
+
 gem 'geocoder', '~> 1.4.3'
 
 gem 'devise', '~> 4.2.0'
